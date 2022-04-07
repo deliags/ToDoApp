@@ -22,4 +22,6 @@ const createTodos = (title, description, dueDate, priority) => {
   }
 
   return (isDone, title, description, dueDate, setPriority)
-}
+};
+
+export default createTodos;
