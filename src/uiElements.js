@@ -1,7 +1,7 @@
 const content = document.getElementById('content');
 
 // sidebar UI
-const createSidebar = () => {
+export const createSidebar = () => {
 
   const sidebar = document.createElement("div");
   sidebar.classList.add("sidebar");
@@ -47,18 +47,28 @@ const createSidebar = () => {
 
   const createProject = () => {
     const projectSection = document.createElement("div");
-    projectSection.classList.add("category-section");
+    projectSection.classList.add("project-section");
 
-    const title = document.createElement("p");
-    title.classList.add("project-title")
-    title.textContent = "projects";
+    const iconProject = document.createElement("i");
+    iconProject.setAttribute("data-feather", "square");
+    const work = document.createElement("p");
+    work.textContent = "work";
 
-    const iconProj = document.createElement("i");
-    iconProj.setAttribute("data-feather", "square");
-    
-    projectSection.append(title, iconProj);
+    const iconProject2 = document.createElement("i");
+    iconProject2.setAttribute("data-feather", "square");
+    const study = document.createElement("p");
+    study.textContent = "study";
 
-    return {projectSection}
+    const iconProject3 = document.createElement("i");
+    iconProject3.setAttribute("data-feather", "square");
+    const gym = document.createElement("p");
+    gym.textContent = "gym";
+
+    projectSection.append(iconProject, work, iconProject2, study, iconProject3, gym);
+
+    return {
+      projectSection
+    }
   }
 
   sidebar.append(
@@ -69,6 +79,35 @@ const createSidebar = () => {
   content.appendChild(sidebar);
 };
 
-export {
-  createSidebar
-};
+export const createMain = () => {
+
+  const mainSection = document.createElement("div");
+  mainSection.classList.add("main");
+
+  const createTask = () => {
+
+    const taskBody = document.createElement('div');
+    taskBody.classList.add("task");
+
+    const taskTitle = document.createElement('p');
+    taskTitle.textContent = "do shopping";
+
+    taskBody.append(taskTitle);
+
+    console.log(mainSection)
+    
+    return {
+      taskBody
+    }
+
+  }
+  
+  mainSection.append(createTask().taskBody)
+  content.appendChild(mainSection);
+}
+
+
+
+// export {
+//   createSidebar, createMain
+// };

@@ -1,4 +1,5 @@
 import createTodos from "./todos";
-import { createSidebar } from "./uiElements";
+import { createSidebar, createMain } from "./uiElements";
 
 createSidebar();
+createMain();

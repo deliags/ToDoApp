@@ -89,7 +89,6 @@ body{
 }
 .sidebar{
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
@@ -97,16 +96,7 @@ body{
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
 }
-.sidebar > :first-child {
-  flex-grow: 1;
-}
 
-.sidebar > :last-child {
-  flex-basis: 0;
-  flex-grow: 999;
-  min-inline-size: 50%;
-}
-  
 .title-section {
   display: flex;
   gap: 1rem;
@@ -132,16 +122,31 @@ h1{
   border-top: solid 1px rgb(171, 165, 165);
   display: grid;
   grid-template-columns: 0.5fr 2fr;
-  place-content: center;
   align-items:center
 }
-
-.project-title{
-  font-weight: 600;
-  font-size: 1.2rem;
+.project-section{
+  margin-top: 1.5rem;
+  padding: 2rem;
+  font-weight: 500;
+  border-top: solid 1px rgb(171, 165, 165);
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  gap: 0.5rem;
+  place-content:center;
+  align-items:center;
 }
 
 .feather{
   width: 16px;
   height: 16px;
+}
+
+.main{
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.task{
+  background-color: aquamarine;
 }
