@@ -1,7 +1,7 @@
 const content = document.getElementById('content');
 
 // sidebar UI
-export const createSidebar = () => {
+const createSidebar = () => {
 
   const sidebar = document.createElement("div");
   sidebar.classList.add("sidebar");
@@ -79,7 +79,7 @@ export const createSidebar = () => {
   content.appendChild(sidebar);
 };
 
-export const createMain = () => {
+const createMain = () => {
 
   const mainSection = document.createElement("div");
   mainSection.classList.add("main");
@@ -92,9 +92,11 @@ export const createMain = () => {
     const taskTitle = document.createElement('p');
     taskTitle.textContent = "do shopping";
 
-    taskBody.append(taskTitle);
+    const taskPriority = document.createElement("div");
+    taskPriority.classList.add("priority");
 
-    console.log(mainSection)
+
+    taskBody.append(taskPriority, taskTitle);
     
     return {
       taskBody
@@ -108,6 +110,6 @@ export const createMain = () => {
 
 
 
-// export {
-//   createSidebar, createMain
-// };
+export {
+  createSidebar, createMain
+};
