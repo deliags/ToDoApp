@@ -88,15 +88,21 @@ const createMain = () => {
 
     const taskBody = document.createElement('div');
     taskBody.classList.add("task");
-
+    
+    const taskPriority = document.createElement("div");
+    taskPriority.classList.add("priority");
+    
     const taskTitle = document.createElement('p');
     taskTitle.textContent = "do shopping";
 
-    const taskPriority = document.createElement("div");
-    taskPriority.classList.add("priority");
+    const taskBtn = document.createElement("button");
+    taskBtn.classList.add("task-button")
+    taskBtn.innerText = "INFO"
 
+    const deleteIcon = document.createElement("i");
+    deleteIcon.setAttribute("data-feather", "x");
 
-    taskBody.append(taskPriority, taskTitle);
+    taskBody.append(taskPriority, taskTitle, taskBtn, deleteIcon);
     
     return {
       taskBody
@@ -107,8 +113,6 @@ const createMain = () => {
   mainSection.append(createTask().taskBody)
   content.appendChild(mainSection);
 }
-
-
 
 export {
   createSidebar, createMain

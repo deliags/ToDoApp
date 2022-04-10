@@ -92,8 +92,8 @@ body{
   flex-wrap: wrap;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .title-section {
@@ -107,7 +107,7 @@ body{
   margin-top: 1rem;
   border-radius: 5px;
   padding: 0.3rem;
-  background-color: rgb(65, 65, 130);
+  background-color: #414182;
 }
 
 h1{
@@ -118,7 +118,7 @@ h1{
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   font-weight: 500;
-  border-top: solid 1px rgb(171, 165, 165);
+  border-top: solid 1px #aba5a5;
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   align-items:center
@@ -127,7 +127,7 @@ h1{
   margin-top: 1.5rem;
   padding: 2rem;
   font-weight: 500;
-  border-top: solid 1px rgb(171, 165, 165);
+  border-top: solid 1px #aba5a5;
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   gap: 0.5rem;
@@ -138,6 +138,7 @@ h1{
 .feather{
   width: 16px;
   height: 16px;
+  align-self: center;
 }
 
 .main{
@@ -150,14 +151,57 @@ h1{
 .task{
   align-items: stretch;
   height: 5vh;
-  background-color: aquamarine;
-  display: grid;
-  grid-template-columns: 0.5rem 15fr;
+  display: flex;
   gap: 1rem;
-  
+  background-color: #ffffff;
+}
+
+.task:hover{
+  box-shadow: #00000059 0px 5px 15px;
+}
+
+.task > p {
+  align-self: center;
 }
 
 .priority{
-  background-color: blueviolet;
-  /* width: 1rem; */
+  background-color: #13dd4f;
+  width: 0.5rem;
+}
+
+
+.task-button {
+  align-self: center;
+  margin-left: auto;
+  background-color: #FAFBFC;
+  border: 2px solid #353535;
+  border-radius: 6px;
+  box-shadow: #1b1f230a 0 1px 0, #ffffff40 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292E;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 0.2rem 0.7rem;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.task-button:hover {
+  background-color: #414182;
+  color: #f7f8fa;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.feather-x {
+  stroke-width: 3;
+  margin-right: 1rem;
+}
+.feather-x:hover{
+  color: #c90a0d;
 }
