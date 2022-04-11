@@ -1,4 +1,4 @@
-import createUI from "./uiElements.js"
+import {createMain} from "./uiElements.js"
 
 const createTodos = (title, description, dueDate, priority) => {
 
@@ -13,15 +13,15 @@ const createTodos = (title, description, dueDate, priority) => {
 
   const setPriority = () => {
     if (priority === "low") {
-      //set color to green
+      taskPriority.classList.add("priority-low");
     } else if (priority === "medium") {
-      //set color to orange
+      taskPriority.classList.add("priority-medium");
     } else {
-      //set color to red
+      taskPriority.classList.add("priority-high");
     }
   }
 
   return (isDone, title, description, dueDate, setPriority)
 };
 
-export default createTodos;
+export { createTodos };

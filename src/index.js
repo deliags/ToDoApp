@@ -1,5 +1,6 @@
 import createTodos from "./todos";
-import { createSidebar, createMain } from "./uiElements";
+import { createSidebar } from "./uiElements";
+import {addTaskBtnClick} from "./eventsListeners"
 
 createSidebar();
-createMain();
+addTaskBtnClick();

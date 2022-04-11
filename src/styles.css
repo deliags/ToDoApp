@@ -60,9 +60,9 @@ select {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
-   scroll-behavior: auto;
+    scroll-behavior: auto;
   }
-  
+
   *,
   *::before,
   *::after {
@@ -73,20 +73,21 @@ select {
   }
 }
 
-:root{
+:root {
   font-family: 'Open Sans', sans-serif;
 }
 
-body{
+body {
   background-color: #f7f8fa;
 }
 
-#content{
+#content {
   display: grid;
   grid-template-columns: 1fr 5fr;
   height: 100vh;
 }
-.sidebar{
+
+.sidebar {
   min-width: 15vw;
   display: flex;
   flex-wrap: wrap;
@@ -101,7 +102,7 @@ body{
   gap: 1rem;
 }
 
-.logo{
+.logo {
   height: auto;
   width: 2.5rem;
   margin-top: 1rem;
@@ -110,20 +111,21 @@ body{
   background-color: #414182;
 }
 
-h1{
+h1 {
   margin-top: 0.7rem;
 }
 
-.category-section{
+.category-section {
   margin-top: 1.5rem;
   padding-top: 1.5rem;
   font-weight: 500;
   border-top: solid 1px #aba5a5;
   display: grid;
   grid-template-columns: 0.5fr 2fr;
-  align-items:center
+  align-items: center
 }
-.project-section{
+
+.project-section {
   margin-top: 1.5rem;
   padding: 2rem;
   font-weight: 500;
@@ -131,24 +133,25 @@ h1{
   display: grid;
   grid-template-columns: 0.5fr 2fr;
   gap: 0.5rem;
-  place-content:center;
-  align-items:center;
+  place-content: center;
+  align-items: center;
 }
 
-.feather{
+.feather {
   width: 16px;
   height: 16px;
   align-self: center;
 }
 
-.main{
+.main {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   padding-inline: 10vw;
   padding-block: 2.5vh;
 }
 
-.task{
+.task {
   align-items: stretch;
   height: 5vh;
   display: flex;
@@ -156,17 +159,29 @@ h1{
   background-color: #ffffff;
 }
 
-.task:hover{
+.task:hover {
   box-shadow: #00000059 0px 5px 15px;
 }
 
-.task > p {
+.task>p {
   align-self: center;
 }
 
-.priority{
-  background-color: #13dd4f;
+.priority-low,
+.priority-medium,
+.priority-high{
   width: 0.5rem;
+}
+.priority-low {
+  background-color: #13dd4f;
+}
+
+.priority-medium{
+  background-color: #dd8213;
+}
+
+.priority-high{
+  background-color: #d21208;
 }
 
 
@@ -202,6 +217,27 @@ h1{
   stroke-width: 3;
   margin-right: 1rem;
 }
-.feather-x:hover{
+
+.feather-x:hover {
   color: #c90a0d;
+}
+
+.add-task {
+  margin-top: auto;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-align: center;
+  border: none;
+  border-radius: 50px;
+  height: 3rem;
+  width: 3rem;
+  outline: none;
+  background: #414182;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15)
+}
+
+.add-task:hover{
+  background: #6363e3;
 }
